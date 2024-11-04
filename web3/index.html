@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="enableMetamask">Enable MetaMask</button>
+    <h2><span class="statusText"></span></h2>
+
+    <input
+      type="text"
+      id="address"
+      placeholder="Contract Address"
+      disabled="true"
+    />
+    <button class="startStopEventListener" disabled="true">
+      Listen to Events
+    </button>
+    
+    <span class="eventResult"> </span>
+
+    <br>
+
+    <button class="getPastEventsBtn">
+        Get past events
+    </button>
+
+    <br />
+    <small>
+      This is an example of Events from
+      <a href="https://ethereum-blockchain-developer.com"
+        >Ethereum-Blockchain-Developer.com</a
+      >
+    </small>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
