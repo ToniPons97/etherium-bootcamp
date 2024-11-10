@@ -16,17 +16,17 @@ contract CoffeeToken is ERC20, AccessControl {
     }
 
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
-        _mint(to, amount);
+        _mint(to, amount * 10 ** decimals());
     }
 
     function buyOneCoffee() public {
-        _burn(_msgSender(), 1);
+        _burn(_msgSender(), 1 * 10 ** decimals());
         emit CoffeePurchased(_msgSender(), _msgSender());
     }
 
     function buyOneCoffeeFrom(address _account) public {
-        _spendAllowance(_account, _msgSender(), 1);
-        _burn(_msgSender(), 1);
+        _spendAllowance(_account, _msgSender(), 1 * 10 ** decimals());
+        _burn(_msgSender(), 1 * 10 ** decimals());
         emit CoffeePurchased(_msgSender(), _account);
     }
 }
