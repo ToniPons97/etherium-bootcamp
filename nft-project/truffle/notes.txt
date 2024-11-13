@@ -1,0 +1,21 @@
+Install: 
+    npm i -g truffle
+
+Compile: 
+    truffle compile
+
+Access truffle's develop "blockchain":
+    truffle develop (depends on node 18)
+    In the truffle shell you can run: compile, migrate (which compiles and then migrates smart contracts configured for deployment in js scripts 
+        inside migrations folder)
+
+
+Install ganache:
+    npm i -g ganache
+
+Run local blockchain:
+    ganache
+
+Migrate to ganache:
+    truffle migrate --network ganache (this is after adding ganache to truffle-config.js)    
+
